@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:35:16 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/11 15:47:55 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:56:39 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,4 @@ void	*ft_memset(void *s, int c, size_t n)
 		i++;
 	}
     return (((unsigned char *)s))
-}q
+}
