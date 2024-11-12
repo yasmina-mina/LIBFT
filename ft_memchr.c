@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 10:43:26 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/12 11:25:38 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/12 23:33:29 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,8 @@ void *ft_memchr(const void *s, int c, size_t n)
 
     i = 0;
     while (i < n)
-    {
         if (((unsigned char *)s)[i] == c)
-           
-    }
-    return ();
+    return (s);
 }
 
 int main () 
