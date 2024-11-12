@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:41:56 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/11 15:46:20 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:07:30 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif
