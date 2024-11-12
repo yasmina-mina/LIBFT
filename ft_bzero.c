@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:40:33 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/11 15:44:41 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/13 00:09:16 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
  
 void ft_bzero(void *s, size_t n)
 {
-    unsigned int    i;
+    size_t    i;
 
     i = 0;
     while (i < n)
