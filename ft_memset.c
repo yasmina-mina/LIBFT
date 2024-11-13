@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:35:16 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 00:08:11 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:48:32 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
@@ -22,5 +22,5 @@ void	*ft_memset(void *s, int c, size_t n)
 		((unsigned char *)s)[i] = c;
 		i++;
 	}
-    return (s);
+	return (s);
 }
