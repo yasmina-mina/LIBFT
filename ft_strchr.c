@@ -6,27 +6,24 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:58:50 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/11 14:10:13 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:26:23 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
     int i;
 
     i = 0;
     while (s[i])
     {
-        if (s[i] == '\0')
-            return (0);
-        else if (s[i] != c)
-            i++;
-        else
-        break;
+        if (s[i] == c)
+            return (&((char *)s)[i]);
+        i++;
     }
-    return (&s[i]);
+    return (NULL);
 }
 
 /*int main (void)
@@ -35,7 +32,7 @@ char *ft_strchr(char *s, int c)
     int chr;
 
     src = "Bonjour";
-    chr = '0';
+    chr = 'w';
     printf("%s\n", ft_strchr(src, chr));
     printf("%s\n", strchr(src, chr));
 }*/
