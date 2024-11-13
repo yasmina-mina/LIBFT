@@ -6,13 +6,11 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:04:14 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 12:49:59 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:43:24 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
 
 char	*ft_strdup(const char *s)
 {
