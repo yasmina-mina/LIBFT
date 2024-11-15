@@ -30,7 +30,8 @@ SRC =	ft_atoi.c\
 		ft_calloc.c\
 		ft_substr.c\
 		ft_strjoin.c\
-		ft_strtrim.c
+		ft_strtrim.c\
+		ft_split.c
 
 OBJ = $(SRC:.c=.o)
 
