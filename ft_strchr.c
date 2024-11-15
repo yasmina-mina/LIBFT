@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:58:50 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 18:48:02 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/14 22:04:16 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-/* int	main(void)
+/*  int	main(void)
 {
 	char    *src;
 	int chr;
 
-	src = "Bon\0jour";
-	chr = '\0';
+	src = "Bonjour";
+	chr = 'u';
 	printf("ft_strchr %s\n", ft_strchr(src, chr));
 	printf("vrai strchr %s\n", strchr(src, chr));
-} */
+}  */
