@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:38:47 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/15 20:25:31 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/16 23:56:54 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ static char	*split_word(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	while (s[i] != c)
+	while (s[i] && s[i] != c)
 		i++;
-	split_word = malloc(sizeof(char) * i + 1);
+	split_word = malloc(sizeof(char) * (i + 1));
 	if (split_word == NULL)
 		return (NULL);
 	while (j < i)
@@ -52,6 +52,18 @@ static char	*split_word(char const *s, char c)
 	split_word[j] = '\0';
 	return (split_word);
 }
+static void	free_all(char **array, int size)
+{
+	int	i;
+	
+	i = 0;
+	while(i < size)
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+}
 
 char	**ft_split(char const *s, char c)
 {
@@ -60,17 +72,25 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	count = count_c(s, c);
-	big_array = malloc((sizeof(char *) * count) + 1);
+	big_array = malloc(sizeof(char *) * (count + 1));
 	if (!big_array)
 		return (NULL);
 	while (*s)
 	{
-		if (*s && *s == c)
+		while (*s && *s == c)
 			s++;
 		if (*s)
 		{
-			big_array[i++] = split_word(s, c);
+			big_array[i] = split_word(s, c);
+			if (!big_array[i])
+			{
+				free_all(big_array, i);
+				return (NULL);
+			}
+			i++;
 			while (*s && *s != c)
 				s++;
 		}
@@ -78,23 +98,3 @@ char	**ft_split(char const *s, char c)
 	big_array[i] = NULL;
 	return (big_array);
 }
-/* int	main(void)
-{
-	printf("Test de ft_split:\n\n");
-	int lensplit = 0;
-	int isplit;
-	char const *str_to_split = "Bonjour_comment_ca_va_???_";
-	char sep = '_';
-	char **tab = ft_split(str_to_split, sep);
-
-	while (tab[lensplit])
-		lensplit++;
-
-	printf("Test de ft_split sur la chaine [%s] avec comme separateur [%c]:\n",
-		str_to_split, sep);
-	printf("        RÃ©sultat : [");
-	for (isplit = 0; isplit < lensplit; isplit++)
-	{
-		printf("\"%s\"", tab[isplit]);
-		if (isplit != lensplit - 1)
-			printf(", "); */

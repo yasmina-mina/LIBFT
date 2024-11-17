@@ -6,33 +6,53 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:03:20 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/15 20:52:10 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/16 21:04:29 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_skip_set (char const *s1, char const *set)
+static int ft_skip_set (char c, char const *set)
 {
-    while(!*set)
+    while(*set)
     {
-        if (*s1 == *set)
-        {
-            return(1)
-            *s1++;
-        }
-      
+        if (c == *set)
+            return(1);
+        set++;
     }
-    return(0)
+    return(0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
     int     i;
-    while(s!)
+    int     j;
+    int     k;
+    char    *s2;
+    int     len_s2;
+    
+    i = 0;
+    k = 0;
+    j = ft_strlen(s1);
+    while (s1[i] && ft_skip_set(s1[i], set))
+        i++;
+    while (j > i && ft_skip_set(s1[j - 1], set))
+        j--;
+    len_s2 = j - i;
+    s2 = (char *)malloc(sizeof(char) * len_s2 + 1);
+    if (!s2)
+        return (NULL);
+    while(k < len_s2)
+    {
+        s2[k] = s1[i];
+        i++;
+        k++;
+    }
+    s2[k] = '\0';
+    return (s2);
 }
 
-/* int	main(void)
+/*  int	main(void)
 {
-	printf("%s\n", ft_strtrim("ouuuuhoooobonjourhoouhoo", "ouh"));
-} */
+     printf("%s\n", ft_strtrim("mouhahahahahouaaammmmsupermouahahah", "mouha"));
+}  */
