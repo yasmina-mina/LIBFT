@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -5,14 +6,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 13:07:08 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/18 00:18:28 by ybenigno         ###   ########.fr       */
+/*   Created: 2024/11/18 13:55:31 by ybenigno          #+#    #+#             */
+/*   Updated: 2024/11/18 14:43:52 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int int_len(int c)
+static int	int_len	(int c)
 {
     int	i;
 
@@ -32,17 +33,19 @@ static int int_len(int c)
     return (i);
 }
 
-static char *res_str(char *str, int n, int len)
+static char *res_str(char *str, int n, int len, int i)
 {
+    if (n == 0)
+		str[0] = '0';
 	while(n > 0)
     {
         str[len - 1] = ((n % 10) + '0');
         n = n / 10;
         len--;
     }
+    str[i] = '\0';
 	return(str);
 }
-
 char	*ft_itoa(int n)
 {
     char	*str;
@@ -56,22 +59,19 @@ char	*ft_itoa(int n)
         return(NULL);
 	if (n == -2147483648)
 	{
-		str[0] = '-';
 		str[len - 1] = '8';
 		n = n / 10;
-		n = - n;
 		len --; 
 	}
 	if (n == 0)
-		str[0] = '0';
+		str = res_str(str, n, len, i);
     if (n < 0)
     {
 		n = - n;
 		str[0] = '-';
 	}
 	if (n > 0)
-		str = res_str(str, n, len);
-    str[i] = '\0';
+		str = res_str(str, n, len, i);
     return (str);
 }
 /* int main(void)

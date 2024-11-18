@@ -36,24 +36,27 @@ SRC =	ft_atoi.c\
 		ft_strmapi.c\
 		ft_itoa.c
 
+BONUS_SRC = ft_lstnew_bonus.c
+
 OBJ = $(SRC:.c=.o)
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all : $(NAME)
 
- $(NAME): $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) -o $(NAME) -c $(FLAGS) $(OBJ) libft.h
 
-#%.o : %.c
-#	$(CC) -o $(OBJ) -c $(SRC)
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
+bonus : $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 clean : 
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus
