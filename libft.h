@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:41:56 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/18 19:20:37 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/18 23:13:52 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_list
 }	t_list;
 
 t_list *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
 char    *ft_itoa(int n);
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
