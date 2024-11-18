@@ -15,10 +15,22 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*tab;
+	size_t	total_size;
 
-	tab = malloc(nmemb * size);
+	// Check for potential overflow 
+	if (nmemb && size > SIZE_MAX / nmemb)
+		return (NULL); // Return NULL if overflow occurs
+
+	// Calculate the total size to allocate
+	total_size = nmemb * size;
+
+	// Allocate memory
+	tab = malloc(total_size);
 	if (tab == NULL)
 		return (NULL);
-	ft_memset(tab, 0, nmemb * size);
+
+	// Zero out the allocated memory using ft_memset
+	ft_memset(tab, 0, total_size);
+
 	return (tab);
 }
