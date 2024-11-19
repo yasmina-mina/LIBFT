@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:28:44 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/19 18:09:50 by ybenigno         ###   ########.fr       */
+/*   Created: 2024/11/19 17:01:23 by ybenigno          #+#    #+#             */
+/*   Updated: 2024/11/19 18:13:03 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*noeud;
-
-	noeud = (t_list *)malloc(sizeof(t_list));
-	if (noeud == NULL)
-		return (NULL);
-	noeud->content = content;
-	noeud->next = NULL;
-	return (noeud);
+	while (*lst && (*lst)->next)
+	{
+		*lst = (*lst)->next;
+	}
+	(*lst)->next = new;
 }
 
-/* int	main(void)
+int main (void)
 {
-	t_list	*bonjour;
 
-	bonjour = ft_lstnew((void *)"truc");
-	printf("%s\n", (char *)bonjour->content);
-} */
+	t_list *head;
+	t_list *node;
+	
+	head = ft_lstnew((void *)"content");
+	node = ft_lstnew((void *)"content");
+
+	ft_lstadd_back(&head, node);
+	while (head)
+	{
+		printf("%p\n", head);
+		printf("%p\n", head->next);
+		head = head->next;
+	}
+	
+}

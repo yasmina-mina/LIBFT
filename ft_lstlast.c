@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:28:44 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/19 18:09:50 by ybenigno         ###   ########.fr       */
+/*   Created: 2024/11/19 17:05:13 by ybenigno          #+#    #+#             */
+/*   Updated: 2024/11/19 17:44:20 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*noeud;
-
-	noeud = (t_list *)malloc(sizeof(t_list));
-	if (noeud == NULL)
-		return (NULL);
-	noeud->content = content;
-	noeud->next = NULL;
-	return (noeud);
+	while (lst && lst->next)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }
-
-/* int	main(void)
-{
-	t_list	*bonjour;
-
-	bonjour = ft_lstnew((void *)"truc");
-	printf("%s\n", (char *)bonjour->content);
-} */
