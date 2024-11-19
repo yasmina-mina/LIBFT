@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:28:44 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/19 15:27:15 by ybenigno         ###   ########.fr       */
+/*   Created: 2024/11/19 16:01:20 by ybenigno          #+#    #+#             */
+/*   Updated: 2024/11/19 16:29:19 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*noeud;
+	int	i;
 
-	noeud = (t_list *)malloc(sizeof(t_list));
-	if (noeud == NULL)
-		return (NULL);
-	noeud->content = content;
-	noeud->next = NULL;
-	return (noeud);
+	i = 0;
+	while (lst != NULL)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }
 
-int	main(void)
+/* int main (void)
 {
-	t_list	*bonjour;
+	t_list *essai;
+	t_list *essai1;
+	t_list *essai2;
+	t_list *essai3;
+	t_list *essai4;
 
-	bonjour = ft_lstnew((void *)"truc");
-	printf("%s\n", (char *)bonjour->content);
-}
+	essai->next = essai1;
+	essai1->next = essai2;
+	essai2->next = essai3;
+	essai3->next = essai4;
+	essai4->next = NULL;
+	printf("%d\n", ft_lstsize(essai));
+} */

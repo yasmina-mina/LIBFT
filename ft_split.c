@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:38:47 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/16 23:56:54 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:25:06 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,13 @@ static char	*split_word(char const *s, char c)
 	split_word[j] = '\0';
 	return (split_word);
 }
+
 static void	free_all(char **array, int size)
 {
 	int	i;
-	
+
 	i = 0;
-	while(i < size)
+	while (i < size)
 	{
 		free(array[i]);
 		i++;
@@ -68,14 +69,12 @@ static void	free_all(char **array, int size)
 char	**ft_split(char const *s, char c)
 {
 	char	**big_array;
-	int		count;
 	int		i;
 
 	i = 0;
 	if (!s)
 		return (NULL);
-	count = count_c(s, c);
-	big_array = malloc(sizeof(char *) * (count + 1));
+	big_array = malloc(sizeof(char *) * (count_c(s, c) + 1));
 	if (!big_array)
 		return (NULL);
 	while (*s)
@@ -86,10 +85,7 @@ char	**ft_split(char const *s, char c)
 		{
 			big_array[i] = split_word(s, c);
 			if (!big_array[i])
-			{
-				free_all(big_array, i);
-				return (NULL);
-			}
+				return (free_all(big_array, i), NULL);
 			i++;
 			while (*s && *s != c)
 				s++;
