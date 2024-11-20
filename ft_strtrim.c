@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:03:20 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/19 15:18:06 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:51:43 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	k = 0;
+	if (!s1 || !set)
+		return (NULL);
 	j = ft_strlen(s1);
 	while (s1[i] && ft_skip_set(s1[i], set))
 		i++;
@@ -43,17 +45,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s2)
 		return (NULL);
 	while (k < len_s2)
-	{
-		s2[k] = s1[i];
-		i++;
-		k++;
-	}
+		s2[k++] = s1[i++];
 	s2[k] = '\0';
 	return (s2);
 }
 
-/*  int	main(void)
+/*   int	main(void)
 {
-		printf("%s\n", ft_strtrim("mouhahahahahouaaammmmsupermouahahah",
+		printf("%s\n", ft_strtrim(NULL,
 				"mouha"));
-}  */
+}   */

@@ -1,5 +1,5 @@
 NAME = libft.a
-CC = gcc
+CC = cc
 FLAGS = -Wall -Werror -Wextra 
 SRC =	ft_atoi.c\
 		ft_isalnum.c\
@@ -36,18 +36,18 @@ SRC =	ft_atoi.c\
 		ft_strmapi.c\
 		ft_itoa.c
 
-BONUS_SRC = ft_lstnew_bonus.c\
-			ft_lstadd_front_bonus.c\
-			ft_lstsize.c\
-			ft_lstlast.c
+BONUS_SRC = ft_lstnew.c\
+			ft_lstadd_front.c\
+			ft_lstsize.c
+			
 
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all : $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) -o $(NAME) -c $(FLAGS) $(OBJ) libft.h
+%.o : %.c
+	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)

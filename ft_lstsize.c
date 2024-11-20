@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 16:01:20 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/19 17:45:16 by ybenigno         ###   ########.fr       */
+/*   Created: 2024/11/20 20:14:33 by ybenigno          #+#    #+#             */
+/*   Updated: 2024/11/20 20:30:13 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	int 	i;
 
 	i = 0;
 	while (lst != NULL)

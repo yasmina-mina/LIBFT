@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:28:44 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/19 18:09:50 by ybenigno         ###   ########.fr       */
+/*   Created: 2024/11/20 16:40:39 by ybenigno          #+#    #+#             */
+/*   Updated: 2024/11/20 20:50:41 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*noeud;
-
-	noeud = (t_list *)malloc(sizeof(t_list));
-	if (noeud == NULL)
-		return (NULL);
-	noeud->content = content;
-	noeud->next = NULL;
-	return (noeud);
+	new->next = *lst;
+	*lst = new;
 }
-
-/* int	main(void)
+int main (void)
 {
-	t_list	*bonjour;
+	t_list new;
+	t_list *pst;
 
-	bonjour = ft_lstnew((void *)"truc");
-	printf("%s\n", (char *)bonjour->content);
-} */
+	new.content = 1;
+	pst = &new;
+}
