@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:50:00 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 16:25:58 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:58:30 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	return (tmp_s1[i] - tmp_s2[i]);
 }
-
-/*int main (void)
-{
-	const char *s1 = "Bonjour";
-	const char *s2 = "Bonsoir";
-
-	printf("%d\n", ft_memcmp(s1, s2, 6));
-	printf("%d\n", memcmp(s1, s2, 6));
-}*/

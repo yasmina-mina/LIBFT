@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:04:14 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 20:43:24 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:57:47 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,3 @@ char	*ft_strdup(const char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*int	main(void)
-{
-	printf("%s\n", ft_strdup("bonjour"));
-	printf("%s\n", strdup("bonjour"));
-}*/

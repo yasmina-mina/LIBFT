@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:09:50 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/14 17:38:28 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:57:37 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (src_l + size);
 }
-
-/* int main (void)
-{
-   char dest[200] = "Bonjour";
-   char *src = "tout le monde";
-   printf("%zu\n", ft_strlcat(dest, src, 9));
-} */

@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:07:07 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 19:18:09 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 20:04:49 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (((unsigned char)*s1 - (unsigned char)*s2));
 }
-/*int	main(void)
-{
-	printf("%d\n", strncmp("bonjour", "bonsoir", 3));
-	printf("%d\n", ft_strncmp("bonjour", "bonsoir", 3));
-}*/

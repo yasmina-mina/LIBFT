@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:24:32 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/19 15:24:38 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 20:04:09 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,3 @@ char	*ft_itoa(int n)
 		str = res_str(str, n, len, i);
 	return (str);
 }
-
-/* int main(void)
-{
-	printf("%s\n", ft_itoa(237374749));
-	printf("%s \n", ft_itoa(-198877));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-2147483648));
-} */

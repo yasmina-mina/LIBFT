@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:05:20 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/07 15:40:07 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:57:23 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
-
-/*int main(void)
-{
-	char lettre = 'e';
-	printf("%c\n", toupper(lettre));
-	printf("%c\n", ft_toupper(lettre));
-}*/

@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 09:06:01 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 11:36:04 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:58:23 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*int main (void)
-{
-   const char src[50] = "Tutorialspoint";
-   char dest[50];
-
-   memcpy(dest, src, 4);
-   printf("After memcpy dest = %s\n", dest);
-
-   ft_memcpy(dest, src, 4);
-   printf("ft_memcpy : %s\n", dest);
-}*/

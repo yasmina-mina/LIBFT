@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:06:48 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/21 16:37:09 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:28:15 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putendl_fd(char *s, int fd)
 
 	i = 0;
 	if (!s)
-		return;
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

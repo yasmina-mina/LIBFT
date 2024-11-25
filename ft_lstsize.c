@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 20:14:33 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/20 20:30:13 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:26:34 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int 	i;
+	int	i;
 
 	i = 0;
-	while (lst != NULL)
+	if (!lst)
+		return (0);
+	while (lst)
 	{
-		lst = lst->next;
 		i++;
+		lst = lst->next;
 	}
 	return (i);
 }

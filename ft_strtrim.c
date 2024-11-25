@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:03:20 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/20 18:51:43 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:57:02 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s2[k] = '\0';
 	return (s2);
 }
-
-/*   int	main(void)
-{
-		printf("%s\n", ft_strtrim(NULL,
-				"mouha"));
-}   */

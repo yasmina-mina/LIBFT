@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:27:22 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/07 15:39:20 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:55:03 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-/*int	main (void)
-{
-	printf("%zu\n", strlen("bonjooooour"));
-	printf("%zu\n", ft_strlen("bonjooooour"));
-}*/

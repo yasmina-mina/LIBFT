@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:23:19 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 18:47:56 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:52:24 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	i = 0;
 	if (size > 0)
 	{
-		while (src && src[i] && (i < size - 1))
+		while (src[i] && (i < size - 1))
 		{
 			dst[i] = src[i];
 			i++;
@@ -30,12 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
-
-/*int main (void)
-{
-	char dest[10];
-	char *src;
-
-	src = "bonjour";
-	printf("%zu\n", ft_strlcpy (dest, src, sizeof(dest)));
-}*/

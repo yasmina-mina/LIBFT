@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:07:41 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/11 11:06:51 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:59:15 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-/*int main(void)
-{
-	printf("%d\n", isprint(122));
-	printf("%d\n", ft_isprint(122));
-}*/

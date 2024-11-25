@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:27:40 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/07 15:35:25 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:59:34 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-/*int main(void)
-{
-	printf("%d\n", ft_isalnum('\0'));
-	printf("%d\n", isalnum('\0'));
-}*/

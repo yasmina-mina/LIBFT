@@ -52,13 +52,13 @@ BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all : $(NAME)
 
-%.o : %.c
+%.o : %.c libft.h Makefile
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME) : $(OBJ) 
 	ar rcs $(NAME) $(OBJ)
 
-bonus : $(BONUS_OBJ) $(NAME)
+bonus : $(BONUS_OBJ) $(NAME) 
 	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean : 

@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:07:16 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/21 16:37:49 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:28:32 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putstr_fd(char const *str, int fd)
 
 	i = 0;
 	if (!str)
-		return;
+		return ;
 	while (str[i])
 	{
 		write(fd, &str[i], 1);

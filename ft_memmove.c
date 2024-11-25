@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 10:04:28 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 12:59:19 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:58:18 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*int main (void)
-{
-   const char *src = "bonjour tout le monde";
-   char dest[40];
-
-   memmove(dest, src, 5);
-   printf("%s\n", dest);
-   ft_memmove(dest, src, 5);
-   printf("%s\n", dest);
-}*/

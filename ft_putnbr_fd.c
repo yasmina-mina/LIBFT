@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:07:26 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/13 12:38:23 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 20:04:43 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n < 10)
 		ft_putchar_fd(n % 10 + '0', fd);
 }
-
-/*int	main(void)
-{
-	ft_putnbr_fd(102, 1);
-}*/

@@ -6,7 +6,7 @@
 /*   By: ybenigno <ybenigno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:37:07 by ybenigno          #+#    #+#             */
-/*   Updated: 2024/11/15 19:42:53 by ybenigno         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:57:07 by ybenigno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*string;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	if (start >= ft_strlen(s))
 		len = 0;
 	if (len >= ft_strlen(s) - start)
@@ -35,8 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	string[i] = '\0';
 	return (string);
 }
-
-/* int     main(void)
-{
-	printf("%s\n", ft_substr("bonjour tout le monde comment ca va?", 20, 10));
-} */
